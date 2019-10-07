@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let str = "";
+  for(let key in obj) {
+    str += obj[key];
+  }
+  return str;
 }
 
 
@@ -53,8 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
+const greaterThan10 = (obj) => {
+  for(let key in obj) {
+    if(obj[key] > 10) {
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -65,8 +75,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
+const double = (obj) => {
+  for(let key in obj) {
+    obj[key] *= 2;
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -79,8 +93,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
-
+const secrets = (obj) => {
+  let str = "";
+  for(let key in obj) {
+    if(obj[key].indexOf()){
+      str += obj[key];
+    }
+  }
+  return str;
+}
 
 
 /* 

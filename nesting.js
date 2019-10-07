@@ -50,7 +50,41 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+// const employeeUpdater = () => {
+//   employees.forEach(function(el, i, employees){
+//     alert(employees[i])
+  // for(let key in employees) {
+  //   if(employees[key] === "Theo") {
+  //     arr.splice(i, 1);
+  //   }
+  //   else if(employees[key] === "Lorie") {
+  //     employees[key][department] = "HR";
+  //   }
+  
+  //   }
+//      } 
+//     )
+// }
+
+
+
+const employeeUpdater = () => {
+  for(i = employees.length - 1; i >= 0; i--) {
+    //alert(i);
+    //alert(employees[i].firstName);
+    
+      if (employees[i].firstName === "Theo") {
+        employees.splice(i, 1);
+      }
+      else if(employees[i].firstName === "Lorie" ) {
+        employees[i].department = "HR";
+      }
+    
+    }
+    return employees;
+  }
+
+
 
 
 
@@ -69,6 +103,29 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+// const removeDuplicates = (arr) => {
+//   return arr.filter(function(el, i, arr) {
+//     arr.indexOf(el) === i;
+//   })
+ 
+// }
+
+// const removeDuplicates = (workplaceAccidents) => {
+//   for(i = workplaceAccidents.length - 1; i >= 0; i--) {
+//     if(workplaceAccidents.indexOf(workplaceAccidents[i]) ===! i) {
+//       workplaceAccidents.splice(i, 1);
+//         }
+//       }
+//       alert(workplaceAccidents);
+//       return workplaceAccidents;
+//     }
+
+const removeDuplicates = (workplaceAccidents) => {
+  uniq = [...new Set(workplaceAccidents)];
+  return uniq;
+}
+    
+
 
 
 
